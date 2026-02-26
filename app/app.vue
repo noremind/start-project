@@ -1,17 +1,17 @@
 <template>
-  <div class="main">
-    <BaseHeader />
-    <div class="main__wrapper">
-      <NuxtPage />
+  <div class="app">
+    <div class="app__wrapper">
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
     </div>
-    <BaseFooter />
   </div>
 </template>
 
 <script setup></script>
 
 <style lang="scss" scoped>
-.main {
+.app {
   &__wrapper {
   }
 }

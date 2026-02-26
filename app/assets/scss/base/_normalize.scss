@@ -1,12 +1,6 @@
-//Fonts
-@font-face {
-	font-family: Gilroy;
-	src: url("") format("woff2");
-	font-style: normal;
-	font-weight: 100;
-}
+@use "../abstracts/colors" as *;
+@use "../utils/fonts" as *;
 
-// Reset
 * {
   margin: 0;
   padding: 0;
@@ -22,9 +16,9 @@ body {
   width: 100%;
   background: $surface-100;
   min-height: 100%;
-	font-weight: 200;
   overflow-x: hidden;
-  color: #000;
+  font-family: "SF Pro Rounded", sans-serif;
+  color: $black;
 }
 
 input,
@@ -33,6 +27,7 @@ select {
   background: none;
   border: none;
   outline: none;
+	font-family: inherit;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -77,8 +72,8 @@ li {
 a {
   text-decoration: none;
   cursor: pointer;
-	font-family: inherit;
   transition: 0.2s;
+	color: inherit;
 }
 
 button {
@@ -86,5 +81,5 @@ button {
 	background-color: transparent;
 	border: none;
 	outline: none;
-	font-family: inherit;
+  font-family: inherit;
 }

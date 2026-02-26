@@ -4,7 +4,7 @@
       <div class="header__top">
         <div class="header__sites">
           <span>Kaz</span>
-          <UiIcons icon="chevron"></UiIcons>
+          <UiIcon icon="chevron" />
         </div>
       </div>
     </div>

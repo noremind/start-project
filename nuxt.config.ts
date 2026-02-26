@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+	css: ['@/assets/scss/index.scss'],
 
   modules: [
         "@pinia/nuxt"
@@ -11,24 +12,18 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          api: 'modern-compiler',
-          additionalData: `
-          @use "@/assets/scss/variables.scss" as *;
-        `,
-        },
-      },
-    },
+ css: {
+   preprocessorOptions: {
+     scss: {
+       additionalData: `
+         @use "@/assets/scss/abstracts/variables" as *;
+         @use "@/assets/scss/abstracts/colors" as *;
+         @use "@/assets/scss/base/colors" as *;
+       `
+     }
+   }
+ }
   },
-
-  css: [
-    "@/assets/scss/normalize.scss",
-    "@/assets/scss/index.scss",
-    "@/assets/scss/icons.scss",
-    "@/assets/scss/primevue/index.scss",
-  ],
 
   pinia: {
     storesDirs: ["./store/**"],
